@@ -1,0 +1,33 @@
+{
+  "name": "colmjude-frontend",
+  "description": "Colmjude frontend",
+  "version": "0.2.1",
+  "engines": {
+    "node": ">= 4.2.0"
+  },
+  "author": "Digital Land team",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/colmjude/colmjude-frontend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/colmjude/colmjude-frontend/issues"
+  },
+  "keywords": ["frontend", "design system", "template"],
+  "license": "MIT",
+  "dependencies": {
+    "browser-sync": "^2.27.7",
+    "chokidar-cli": "^3.0.0",
+    "copyfiles": "latest",
+    "govuk-frontend": "^3.14.0",
+    "node-sass": "^6.0.1",
+    "nps": "^5.10.0",
+    "rollup": "^2.60.0",
+    "standardx": "^7.0.0"
+  },
+  "homepage": "https://github.com/colmjude/colmjude-frontend/package",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
