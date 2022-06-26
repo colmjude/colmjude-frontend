@@ -3,4 +3,5 @@
 
 // should be used in projects where you don't want all the general cj classes to be in the stylesheet output
 
-@import 'helpers/all'
+@import 'helpers/all';
+@import 'vendor/sass-mq';
