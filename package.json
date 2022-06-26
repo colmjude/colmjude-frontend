@@ -6,11 +6,12 @@
     "node": "^16.0.0"
   },
   "scripts": {
+    "build:javascripts": "rollup --config rollup.config.js",
     "build:stylesheets": "node-sass colmjude_frontend/src/scss -o assets/stylesheets --include-path colmjude_frontend/templates/components",
     "clean:package": "rm -rf package/colmjude-frontend",
     "copy:scss": "copyfiles 'colmjude_frontend/src/scss/**/*.scss' package/colmjude-frontend/ --up 3 && copyfiles 'colmjude_frontend/templates/components/**/*.scss' package/colmjude-frontend/ --up 2",
     "copy:templates": "copyfiles 'colmjude_frontend/templates/**/*.jinja' package/colmjude-frontend/ --up 2",
-    "build:package": "npm-run-all clean:package copy:scss copy:templates",
+    "build:package": "npm-run-all clean:package build:javascripts copy:*",
     "watch:javascripts": "rollup --config rollup.config.js --watch",
     "lint:stylesheets": "sass-lint --config .sass-lint.yml 'colmjude_frontend/**/*.scss' --verbose --no-exit",
     "build": "npm-run-all --serial lint:* build:*"
