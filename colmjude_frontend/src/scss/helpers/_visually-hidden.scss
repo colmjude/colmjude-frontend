@@ -13,7 +13,7 @@
 ///
 /// @access public
 
-@mixin visually-hidden {
+@mixin cj-visually-hidden {
   position: absolute;
 
   width: 1px;
@@ -42,7 +42,7 @@
 ///
 /// @access public
 
-@mixin visually-hidden-focusable {
+@mixin cj-visually-hidden-focusable {
   position: absolute;
 
   width: 1px;
@@ -72,12 +72,4 @@
 
     white-space: inherit;
   }
-}
-
-.visually-hidden {
-  @include visually-hidden;
-}
-
-.visually-hidden-focusable {
-  @include visually-hidden-focusable;
 }

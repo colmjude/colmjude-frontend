@@ -6,7 +6,7 @@
 ///
 /// @access public
 
-@mixin clearfix {
+@mixin cj-clearfix {
   &:after {
     content: "";
     display: block;

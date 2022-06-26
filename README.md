@@ -9,3 +9,8 @@ Install dependencies
 make init
 ```
 
+### Test stylesheet build
+
+```
+make test-asset-build
+```
