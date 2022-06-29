@@ -16,7 +16,7 @@ if (fs.existsSync(optionalConfigPath)) {
 }
 
 scripts.build = {
-  stylesheets: `npx sass ${configPaths.scssPath} -o ${configPaths.stylesheetsOutputPath} --load-path ${configPaths.colmjudeFrontendPath}`,
+  stylesheets: `npx sass ${configPaths.scssPath}:${configPaths.stylesheetsOutputPath} --load-path ${configPaths.colmjudeFrontendPath}`,
   javascripts: `npx rollup --config ${configPaths.rollupConfig}`
 }
 
