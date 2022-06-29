@@ -1,7 +1,7 @@
 {
   "name": "colmjude-frontend",
   "description": "Colmjude frontend",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "engines": {
     "node": ">= 4.2.0"
   },
@@ -19,8 +19,7 @@
     "browser-sync": "^2.27.7",
     "chokidar-cli": "^3.0.0",
     "copyfiles": "latest",
-    "govuk-frontend": "^3.14.0",
-    "node-sass": "^6.0.1",
+    "sass": "^1.53.0",
     "nps": "^5.10.0",
     "rollup": "^2.60.0",
     "standardx": "^7.0.0"
