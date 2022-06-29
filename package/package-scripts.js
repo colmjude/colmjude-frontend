@@ -15,8 +15,13 @@ if (fs.existsSync(optionalConfigPath)) {
   }
 }
 
+scripts.stylesheets = {
+  compile: `npx sass ${configPaths.scssPath}:${configPaths.stylesheetsOutputPath} --load-path ${configPaths.colmjudeFrontendPath}`,
+  postprocess: `npx postcss '${configPaths.stylesheetsOutputPath}/**/*.css' --base ${configPaths.stylesheetsOutputPath} --dir ${configPaths.stylesheetsOutputPath}/ --no-map --use autoprefixer --verbose`
+}
+
 scripts.build = {
-  stylesheets: `npx sass ${configPaths.scssPath}:${configPaths.stylesheetsOutputPath} --load-path ${configPaths.colmjudeFrontendPath}`,
+  stylesheets: "npm run nps stylesheets.compile && npm run nps stylesheets.postprocess",
   javascripts: `npx rollup --config ${configPaths.rollupConfig}`
 }
 

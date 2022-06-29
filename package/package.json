@@ -1,7 +1,7 @@
 {
   "name": "colmjude-frontend",
   "description": "Colmjude frontend",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "engines": {
     "node": ">= 4.2.0"
   },
@@ -16,11 +16,13 @@
   "keywords": ["frontend", "design system", "template"],
   "license": "MIT",
   "dependencies": {
+    "autoprefixer": "^10.4.7",
     "browser-sync": "^2.27.7",
     "chokidar-cli": "^3.0.0",
     "copyfiles": "latest",
     "sass": "^1.53.0",
     "nps": "^5.10.0",
+    "postcss-cli": "^9.1.0",
     "rollup": "^2.60.0",
     "standardx": "^7.0.0"
   },
