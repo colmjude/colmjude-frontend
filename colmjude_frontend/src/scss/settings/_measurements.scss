@@ -1,0 +1,13 @@
+/// Width of gutter between grid columns
+///
+/// @type Number
+/// @access public
+
+$cj-gutter: 30px !default;
+
+/// Width of half the gutter between grid columns
+///
+/// @type Number
+/// @access public
+
+$cj-gutter-half: $cj-gutter / 2;
