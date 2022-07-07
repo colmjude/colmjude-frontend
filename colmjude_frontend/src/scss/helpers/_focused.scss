@@ -1,0 +1,12 @@
+@mixin cj-focused-text {
+  // When colours are overridden, for example when users have a dark mode,
+  // backgrounds and box-shadows disappear, so we need to ensure there's a
+  // transparent outline which will be set to a visible colour.
+
+  color: $cj-focus-text-colour;
+  background-color: $cj-focus-colour;
+  box-shadow: 0 -2px $cj-focus-colour, 0 4px $cj-focus-text-colour;
+  // When link is focussed, hide the default underline since the
+  // box shadow adds the "underline"
+  text-decoration: none;
+}

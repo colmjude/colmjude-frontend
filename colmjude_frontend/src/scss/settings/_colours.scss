@@ -1,0 +1,13 @@
+$cj-text-colour: #262731;
+
+$cj-link-colour: #353431;
+$cj-link-hover-colour: #d95a45;
+$cj-link-visited-colour: lighten($cj-link-colour, 10);
+$cj-link-active-colour: darken($cj-link-colour, 5);
+
+
+// focus colours
+// -----------------------------------------
+
+$cj-focus-colour: #53B7EA;
+$cj-focus-text-colour: $cj-text-colour;

@@ -1,0 +1,44 @@
+@mixin cj-link-style ($link-colour: $cj-link-colour, $link-visited-colour: $cj-link-visited-colour, $link-hover-colour: $cj-link-hover-colour, $link-active-colour: $cj-link-active-colour, $focus-text-colour: $cj-focus-text-colour) {
+  @include cj-typography-common;
+  text-decoration: underline;
+
+  @if $cj-link-underline-thickness {
+    text-decoration-thickness: $cj-link-underline-thickness;
+  }
+
+  @if $cj-link-underline-offset {
+    text-underline-offset: $cj-link-underline-offset;
+  }
+  
+  &:link {
+    color: $link-colour;
+  }
+
+  &:visited {
+    color: $link-visited-colour;
+  }
+
+  &:hover {
+    color: $link-hover-colour;
+    @if $cj-link-hover-underline-thickness {
+      text-decoration-thickness: $cj-link-hover-underline-thickness;
+      // Disable ink skipping on underlines on hover. Browsers haven't
+      // standardised on this part of the spec yet, so set both properties
+      -webkit-text-decoration-skip-ink: none;
+              text-decoration-skip-ink: none; // Chromium, Firefox
+      -webkit-text-decoration-skip: none;
+              text-decoration-skip: none; // Safari
+    }
+  }
+
+  &:active {
+    color: $link-active-colour;
+  }
+
+  // When focussed, the text colour needs to be darker to ensure that colour
+  // contrast is still acceptable
+  &:focus {
+    @include cj-focused-text;
+    color: $focus-text-colour;
+  }
+}
