@@ -1,0 +1,7 @@
+%cj-link {
+  @include cj-link-style;
+}
+
+.cj-link {
+  @extend %cj-link;
+}
