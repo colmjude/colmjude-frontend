@@ -1,0 +1,14 @@
+
+%cj-heading-xl {
+  color: $cj-text-colour;
+  @include cj-font($size: 60, $weight: bold);
+
+  display: block;
+
+  margin-top: 0;
+  @include cj-responsive-margin(8, "bottom");
+}
+
+.cj-heading-xl {
+  @extend %cj-heading-xl;
+}
