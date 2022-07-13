@@ -5,6 +5,22 @@
 
 $cj-font-family: 'Open Sans', sans-serif;
 
+// =========================================================
+// Font weights
+// =========================================================
+
+/// Font weight for regular typography
+///
+/// @type Number
+/// @access public
+$cj-font-weight-regular: 400 !default;
+
+/// Font weight for bold typography
+///
+/// @type Number
+/// @access public
+$cj-font-weight-bold: 700 !default;
+
 /// Thickness of link underlines
 ///
 /// The default will be either:

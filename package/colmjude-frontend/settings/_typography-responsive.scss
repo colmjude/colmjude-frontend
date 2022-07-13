@@ -1,0 +1,96 @@
+/// Root font size
+///
+/// This is used to calculate rem sizes for the typography, and should match the
+/// _effective_ font-size of your root (or html) element.
+///
+/// @type Number
+/// @access public
+
+$cj-root-font-size: 16px !default;
+
+/// Responsive typography font map
+///
+/// @type Map
+/// 
+$cj-typography-scale: (
+  85: (
+    null: (
+      font-size: 60px,
+      line-height: 64px
+    ),
+    tablet: (
+      font-size: 85px,
+      line-height: 85px
+    )
+  ),
+  60: (
+    null: (
+      font-size: 42px,
+      line-height: 46px
+    ),
+    tablet: (
+      font-size: 60px,
+      line-height: 64px
+    )
+  ),
+  42: (
+    null: (
+      font-size: 32px,
+      line-height: 35px
+    ),
+    tablet: (
+      font-size: 42px,
+      line-height: 46px
+    )
+  ),
+  32: (
+    null: (
+      font-size: 25px,
+      line-height: 30px
+    ),
+    tablet: (
+      font-size: 32px,
+      line-height: 35px
+    )
+  ),
+  25: (
+    null: (
+      font-size: 20px,
+      line-height: 22px
+    ),
+    tablet: (
+      font-size: 25px,
+      line-height: 30px
+    )
+  ),
+  20: (
+    null: (
+      font-size: 16px,
+      line-height: 20px
+    ),
+    tablet: (
+      font-size: 20px,
+      line-height: 25px
+    )
+  ),
+  16: (
+    null: (
+      font-size: 14px,
+      line-height: 16px
+    ),
+    tablet: (
+      font-size: 16px,
+      line-height: 20px
+    )
+  ),
+  14: (
+    null: (
+      font-size: 12px,
+      line-height: 15px
+    ),
+    tablet: (
+      font-size: 14px,
+      line-height: 20px
+    )
+  )
+) !default;
