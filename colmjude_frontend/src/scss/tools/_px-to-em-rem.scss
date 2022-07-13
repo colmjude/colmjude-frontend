@@ -38,5 +38,5 @@
     $value: $value * 1px;
   }
 
-  @return $value / $cj-root-font-size * 1rem;
+  @return math.div($value, $cj-root-font-size) * 1rem;
 }

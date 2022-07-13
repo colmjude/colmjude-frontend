@@ -10,4 +10,4 @@ $cj-gutter: 30px !default;
 /// @type Number
 /// @access public
 
-$cj-gutter-half: $cj-gutter / 2;
+$cj-gutter-half: math.div($cj-gutter, 2);
