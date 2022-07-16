@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>{%- block pageTitle %}{% endblock %}</title>
+
+  {% block head %}
+    {%- block headStart %}{% endblock headStart -%}
+
+    {%- block pageAssets %}
+      {% block googleFonts %}{% endblock %}
+      
+      {%- block stylesheets -%}
+          <link rel="stylesheet" media="all" href="{{ assetPath }}/stylesheets/walesgel/wales-gel.css" />
+          {% endblock stylesheets -%}
+      {% endblock pageAssets %}
+
+      {%- block headEnd %}{% endblock headEnd -%}
+  {% endblock head %}
+</head>
+<body class="{{ bodyClasses }}">
+  <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+  {% block bodyStart %}{% endblock %}
+
+  {% block main -%}
+    {% block content %}{% endblock %}
+  {%- endblock %}
+  
+  {% block bodyEnd %}
+    {%- block bodyScriptsStart %}{% endblock bodyScriptsStart %}
+
+    {%- block bodyScripts %}
+        {% block commonScripts %}{% endblock commonScripts %}
+        {%- block pageScripts %}{% endblock pageScripts %}
+    {%- endblock bodyScripts %}
+
+    {%- block bodyScriptsEnd %}{% endblock bodyScriptsEnd %}
+  {% endblock %}
+</body>
+</html>
