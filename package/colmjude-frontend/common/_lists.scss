@@ -1,0 +1,48 @@
+%cj-list {
+  @include cj-font($size: 20);
+  color: $cj-text-colour;
+  margin-top: 0;
+  @include cj-responsive-margin(4, "bottom");
+  padding-left: 0;
+  list-style-type: none;
+
+  // Add a top margin for nested lists
+  %cj-list {
+    margin-top: cj-spacing(2);
+  }
+}
+
+%cj-list > li {
+  margin-bottom: cj-spacing(1);
+}
+
+.cj-list {
+  @extend %cj-list;
+}
+
+%cj-list--bullet {
+  padding-left: cj-spacing(4);
+  list-style-type: disc;
+}
+
+%cj-list--number {
+  padding-left: cj-spacing(4);
+  list-style-type: decimal;
+}
+
+%cj-list--bullet > li,
+%cj-list--number > li {
+  margin-bottom: 0;
+
+  @include mq($from: tablet) {
+    margin-bottom: cj-spacing(1);
+  }
+}
+
+.cj-list--bullet {
+  @extend %cj-list--bullet;
+}
+
+.cj-list--number {
+  @extend %cj-list--number;
+}
