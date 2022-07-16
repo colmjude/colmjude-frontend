@@ -21,6 +21,7 @@
   &:hover {
     color: $link-hover-colour;
     @if $cj-link-hover-underline-thickness {
+      text-decoration-color: lighten($link-hover-colour, 3);
       text-decoration-thickness: $cj-link-hover-underline-thickness;
       // Disable ink skipping on underlines on hover. Browsers haven't
       // standardised on this part of the spec yet, so set both properties
