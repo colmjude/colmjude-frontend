@@ -1,3 +1,4 @@
+// Headings
 
 %cj-heading-xl {
   color: $cj-text-colour;
@@ -11,4 +12,112 @@
 
 .cj-heading-xl {
   @extend %cj-heading-xl;
+}
+
+%cj-heading-l {
+  color: $cj-text-colour;
+  @include cj-font($size: 42, $weight: bold);
+
+  display: block;
+
+  margin-top: 0;
+  @include cj-responsive-margin(6, "bottom");
+}
+
+.cj-heading-l {
+  @extend %cj-heading-l;
+}
+
+%cj-heading-m {
+  color: $cj-text-colour;
+  @include cj-font($size: 32, $weight: bold);
+
+  display: block;
+
+  margin-top: 0;
+  @include cj-responsive-margin(4, "bottom");
+}
+
+.cj-heading-m {
+  @extend %cj-heading-m;
+}
+
+%cj-heading-s {
+  color: $cj-text-colour;
+  @include cj-font($size: 25, $weight: bold);
+
+  display: block;
+
+  margin-top: 0;
+  @include cj-responsive-margin(4, "bottom");
+}
+
+.cj-heading-s {
+  @extend %cj-heading-s;
+}
+
+%cj-heading-xs {
+  color: $cj-text-colour;
+  @include cj-font($size: 20, $weight: bold);
+
+  display: block;
+
+  margin-top: 0;
+  @include cj-responsive-margin(2, "bottom");
+}
+
+.cj-heading-xs {
+  @extend %cj-heading-xs;
+}
+
+%cj-body-l {
+  color: $cj-text-colour;
+  @include cj-font($size: 25);
+
+  margin-top: 0;
+  @include cj-responsive-margin(6, "bottom");
+}
+
+// paragraphy "body" text
+
+.cj-body-l {
+  @extend %cj-body-l;
+}
+
+%cj-body-m {
+  color: $cj-text-colour;
+  @include cj-font($size: 20);
+
+  margin-top: 0;
+  @include cj-responsive-margin(4, "bottom");
+}
+
+.cj-body-m {
+  @extend %cj-body-m;
+}
+
+%cj-body-s {
+  color: $cj-text-colour;
+  @include cj-font($size: 16);
+
+  margin-top: 0;
+  @include cj-responsive-margin(4, "bottom");
+}
+
+.cj-body-s {
+  @extend %cj-body-s;
+}
+
+%cj-body-xs {
+  color: $cj-text-colour;
+  @include cj-font($size: 14);
+
+  margin-top: 0;
+  @include cj-responsive-margin(4, "bottom");
+}
+
+// Usage aliases
+
+.cj-body {
+  @extend %cj-body-m;
 }
