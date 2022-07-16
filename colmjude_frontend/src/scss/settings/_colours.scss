@@ -1,7 +1,7 @@
 $cj-text-colour: #262731;
 
-$cj-link-colour: #353431;
-$cj-link-hover-colour: #d95a45;
+$cj-link-colour: #3a5d8b;
+$cj-link-hover-colour: #ae3724; // darken(#d95a45, 15)
 $cj-link-visited-colour: lighten($cj-link-colour, 10);
 $cj-link-active-colour: darken($cj-link-colour, 5);
 
