@@ -1,0 +1,18 @@
+.cj-pullquote {
+  margin: $cj-gutter 0;
+  padding: $cj-gutter;
+  background: $cj-off-white;
+  border-radius: $cj-border-radius;
+  border-left: 4px solid $cj-link-colour; // to do: maybe width should a global var
+
+  @include cj-font($size: 20);
+  font-style: italic;
+
+  p:first-child {
+    margin-top: 0;
+  }
+
+  p:last-of-type {
+    margin-bottom: 0;
+  }
+}
