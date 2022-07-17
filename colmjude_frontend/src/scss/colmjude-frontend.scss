@@ -4,4 +4,10 @@
 @import "utilities/all";
 @import "overrides/all";
 @import "objects/all";
-@import "common/all"
+@import "common/all";
+
+/// Components
+/// Imported individually because will eventually more them to templates/components/component/_component.scss
+/// 
+
+@import "components/code-blocks";

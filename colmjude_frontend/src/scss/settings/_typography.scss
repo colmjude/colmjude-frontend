@@ -21,6 +21,11 @@ $cj-font-weight-regular: 400 !default;
 /// @access public
 $cj-font-weight-bold: 700 !default;
 
+// =========================================================
+// Link underlines
+// =========================================================
+
+
 /// Thickness of link underlines
 ///
 /// The default will be either:
@@ -60,3 +65,14 @@ $cj-link-underline-offset: .1em !default;
 /// @access public
 
 $cj-link-hover-underline-thickness: unquote("max(3px, .1875rem, .12em)") !default;
+
+// =========================================================
+// Code blocks
+// =========================================================
+
+/// Font size for code blocks - takes a number and is used to access size map
+///
+/// @type Number
+/// @access public
+
+$cj-code-font-size: 16;
