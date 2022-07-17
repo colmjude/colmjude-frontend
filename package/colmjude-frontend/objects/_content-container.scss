@@ -1,0 +1,5 @@
+.cj-content-container {
+  max-width: cj-px-to-rem((20 * 35)); // 20 (standard font-size) * 32 (line length in ems)
+  margin: 0 auto;
+  padding: 0;
+}

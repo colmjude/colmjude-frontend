@@ -1,0 +1,31 @@
+.cj-code-block {
+  box-sizing: border-box;
+  @include cj-responsive-margin(4, "top");
+  @include cj-responsive-margin(4, "bottom");
+  @include cj-responsive-padding(3);
+  border-radius: $cj-border-radius * 2;
+  background: $cj-off-white;
+  overflow: auto;
+
+  @include cj-typography-common ($font-family: monospace);
+  $font-map: map-get($cj-typography-scale, $cj-code-font-size);
+
+  @each $breakpoint, $breakpoint-map in $font-map {
+    $font-size: map-get($breakpoint-map, "font-size");
+    $font-size-rem: cj-px-to-rem($font-size);
+    @if not $breakpoint {
+      font-size: $font-size;
+      font-size: $font-size-rem;
+    } @else {
+      @include mq($from: $breakpoint) {
+        font-size: $font-size;
+        font-size: $font-size-rem;
+      }
+    }
+  }
+
+  @include mq($from: desktop) {
+    width: 100% + $cj-full-width-increase;
+    margin-left: -($cj-full-width-increase);
+  }
+}
