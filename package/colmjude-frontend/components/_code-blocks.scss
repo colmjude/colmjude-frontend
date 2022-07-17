@@ -1,4 +1,4 @@
-.cj-code-block {
+%cj-code-block {
   box-sizing: border-box;
   @include cj-responsive-margin(4, "top");
   @include cj-responsive-margin(4, "bottom");
@@ -28,4 +28,8 @@
     width: 100% + $cj-full-width-increase;
     margin-left: -($cj-full-width-increase);
   }
+}
+
+.cj-code-block {
+  @extend %cj-code-block;
 }
