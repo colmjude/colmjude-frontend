@@ -1,0 +1,40 @@
+{% macro cjHeader(params) %}
+<header class="top-bar">
+
+	<div class="top-bar__details">
+		<a class="top-bar__details__link" href="/">
+			<svg version="1.1" id="Layer_1" class="logo-sqr" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 120 120" xml:space="preserve">
+			<style type="text/css">
+				.st0{fill:#D95A45;}
+				.st1{fill:#1C2D43;}
+			</style>
+			<g>
+				<rect class="st0" width="120" height="120"/>
+				<rect y="80" class="st1" width="120" height="40"/>
+				<rect y="60" class="st1" width="60" height="10"/>
+				<rect x="75" y="90" class="st0" width="45" height="10"/>
+			</g>
+			</svg>
+
+			<h2 class="top-bar__name">Colmjude</h2>
+		</a>
+	</div>
+
+	<nav>
+		<input type="checkbox" id="tm" class="top-bar__menu-toggle">
+		<label for="tm" class="tm">Menu</label>
+		<ul class="top-bar__menu">
+			<li class="top-bar__menu__item">
+				<a class="top-bar__menu__item__link" href="/"><span>Home</span></a>
+			</li>
+			<li class="top-bar__menu__item">
+				<a class="top-bar__menu__item__link" href="/blog"><span>Blog</span></a>
+			</li>
+			<li class="top-bar__menu__item">
+				<a class="top-bar__menu__item__link" href="/about"><span>About</span></a>
+			</li>
+		</ul>
+	</nav>
+
+</header>
+{% endmacro %}
