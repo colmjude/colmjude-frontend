@@ -1,7 +1,7 @@
 .cj-top-bar {
   position: relative;
-  padding: $gutter-half 30px;
-  color: $text-colour;
+  padding: $cj-gutter-half 30px;
+  color: $cj-text-colour;
 
   @include mq($from: tablet) {
     display: flex;
@@ -17,8 +17,8 @@
 
   label {
     position: absolute;
-    top: $gutter * 1.5;
-    right: $gutter;
+    top: $cj-gutter * 1.5;
+    right: $cj-gutter;
     font-size: 20px;
     line-height: 35px;
 
@@ -54,12 +54,12 @@
 .cj-top-bar__details__link {
   @include focusable;
   display: block;
-  padding: $gutter 0;
+  padding: $cj-gutter 0;
 }
 
 .cj-top-bar__name {
   display: inline;
-  padding-left: $gutter-half;
+  padding-left: $cj-gutter-half;
   font-family: "Roboto";
   font-size: 30px;
   font-weight: 300;
@@ -90,7 +90,7 @@
 }
 
 .cj-top-bar__menu__item {
-  padding: 0 $gutter;
+  padding: 0 $cj-gutter;
   border-top: 1px solid $cj-dark-blue-colour;
   font-size: 20px;
   line-height: 35px;
@@ -117,17 +117,17 @@
   @include focusable;
   display: block;
   position: relative;
-  padding: $gutter-half;
+  padding: $cj-gutter-half;
   font-weight: 300;
 
   @include mq($from: tablet) {
     display: inline-block;
-    padding: $gutter $gutter-half;
+    padding: $cj-gutter $cj-gutter-half;
   }
 
   &:hover,
   &:focus {
-    color: darken($text-colour, 20);
+    color: darken($cj-text-colour, 20);
     text-decoration: underline;
 
     @include mq($from: tablet) {
@@ -136,9 +136,9 @@
       &:after {
         content: "";
         position: absolute;
-        bottom: $gutter;
-        left: $gutter-half;
-        width: calc(100% - #{$gutter});
+        bottom: $cj-gutter;
+        left: $cj-gutter-half;
+        width: calc(100% - #{$cj-gutter});
         height: 4px;
         background: linear-gradient(to left, $cj-dark-blue-colour, $cj-red-colour);
       }
@@ -155,16 +155,16 @@
     &:after {
       content: "";
       position: absolute;
-      bottom: $gutter;
-      left: $gutter-half;
-      width: calc(100% - #{$gutter});
+      bottom: $cj-gutter;
+      left: $cj-gutter-half;
+      width: calc(100% - #{$cj-gutter});
       height: 4px;
       background: linear-gradient(to left, $cj-dark-blue-colour, $cj-red-colour);
     }
 
     &:last-child {
       &:after {
-        width: calc(100% - #{$gutter-half});
+        width: calc(100% - #{$cj-gutter-half});
       }
     }
   }
