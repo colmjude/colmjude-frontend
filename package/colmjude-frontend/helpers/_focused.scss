@@ -10,3 +10,12 @@
   // box shadow adds the "underline"
   text-decoration: none;
 }
+
+@mixin focusable {
+  &:focus {
+    border-radius: 2px;
+    outline: 3px solid rgba($cj-focus-colour, .547);
+    outline-offset: 3px;
+    background-color: rgba($cj-focus-colour, .547);
+  }
+}
