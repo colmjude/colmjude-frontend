@@ -39,7 +39,6 @@
 
     &:focus + label {
       text-decoration: underline; 
-      @include focusable-faking($position: absolute);
     }
   }
 
