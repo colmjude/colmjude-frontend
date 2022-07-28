@@ -1,0 +1,171 @@
+.cj-top-bar {
+  position: relative;
+  padding: $gutter-half 30px;
+  color: $text-colour;
+
+  @include mq($from: tablet) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .logo-sqr {
+    display: inline;
+    width: 35px;
+    height: 35px;
+    vertical-align: top;
+  }
+
+  label {
+    position: absolute;
+    top: $gutter * 1.5;
+    right: $gutter;
+    font-size: 20px;
+    line-height: 35px;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+
+  input[type=checkbox] {
+    width: 0;
+    height: 0;
+    // takes checkbox out of flow
+    // means nav element has height 0 when collapsed
+    float: left;
+    opacity: 0;
+
+    &:focus + label {
+      text-decoration: underline; 
+      @include focusable-faking($position: absolute);
+    }
+  }
+
+  @include mq($from: tablet) {
+    input[type=checkbox],
+    label {
+      display: none;
+    }
+  }
+}
+
+.cj-top-bar__details__link {
+  @include focusable;
+  display: block;
+  padding: $gutter 0;
+}
+
+.cj-top-bar__name {
+  display: inline;
+  padding-left: $gutter-half;
+  font-family: "Roboto";
+  font-size: 30px;
+  font-weight: 300;
+  letter-spacing: 5px;
+  line-height: 1.25em;
+  text-transform: uppercase;
+}
+
+.cj-top-bar__menu {
+  @include mq($until: tablet) {
+    display: none;
+  }
+
+  text-align: center;
+
+  @include mq($from: tablet) {
+    display: flex;
+    text-align: left;
+  }
+}
+
+.cj-top-bar__menu-toggle:checked ~ .cj-top-bar__menu {
+  display: block;
+
+  @include mq($from: tablet) {
+    display: flex;
+  }
+}
+
+.cj-top-bar__menu__item {
+  padding: 0 $gutter;
+  border-top: 1px solid $cj-dark-blue-colour;
+  font-size: 20px;
+  line-height: 35px;
+
+  &:last-child {
+    border-bottom: 1px solid $cj-dark-blue-colour;
+  }
+
+  @include mq($from: tablet) {
+    border: 0;
+
+    &:last-child {
+      padding-right: 0;
+      border: 0;
+
+      .cj-top-bar__menu__item__link {
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+.cj-top-bar__menu__item__link {
+  @include focusable;
+  display: block;
+  position: relative;
+  padding: $gutter-half;
+  font-weight: 300;
+
+  @include mq($from: tablet) {
+    display: inline-block;
+    padding: $gutter $gutter-half;
+  }
+
+  &:hover,
+  &:focus {
+    color: darken($text-colour, 20);
+    text-decoration: underline;
+
+    @include mq($from: tablet) {
+      text-decoration: none;
+
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: $gutter;
+        left: $gutter-half;
+        width: calc(100% - #{$gutter});
+        height: 4px;
+        background: linear-gradient(to left, $cj-dark-blue-colour, $cj-red-colour);
+      }
+    }
+  }
+}
+
+.cj-top-bar__menu__item__link--active {
+  text-decoration: underline;
+
+  @include mq($from: tablet) {
+    text-decoration: none;
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: $gutter;
+      left: $gutter-half;
+      width: calc(100% - #{$gutter});
+      height: 4px;
+      background: linear-gradient(to left, $cj-dark-blue-colour, $cj-red-colour);
+    }
+
+    &:last-child {
+      &:after {
+        width: calc(100% - #{$gutter-half});
+      }
+    }
+  }
+}
