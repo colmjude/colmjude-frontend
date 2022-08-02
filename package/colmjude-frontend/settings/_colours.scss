@@ -7,7 +7,13 @@ $cj-link-hover-colour: #ae3724; // darken(#d95a45, 15)
 $cj-link-visited-colour: lighten($cj-link-colour, 10);
 $cj-link-active-colour: darken($cj-link-colour, 5);
 
+/// Logo colours (Red and Blue)
+///
+/// @type Colour
+/// @access public
+
 $cj-dark-blue-colour: #1c2d43;
+$cj-red-colour: #d95a45;
 
 
 // focus colours
