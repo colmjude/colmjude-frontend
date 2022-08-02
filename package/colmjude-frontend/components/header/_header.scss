@@ -112,40 +112,7 @@
   }
 }
 
-.cj-top-bar__menu__item__link {
-  @include focusable;
-  display: block;
-  position: relative;
-  padding: $cj-gutter-half;
-  font-weight: 300;
-
-  @include mq($from: tablet) {
-    display: inline-block;
-    padding: $cj-gutter $cj-gutter-half;
-  }
-
-  &:hover,
-  &:focus {
-    color: darken($cj-text-colour, 20);
-    text-decoration: underline;
-
-    @include mq($from: tablet) {
-      text-decoration: none;
-
-      &:after {
-        content: "";
-        position: absolute;
-        bottom: $cj-gutter;
-        left: $cj-gutter-half;
-        width: calc(100% - #{$cj-gutter});
-        height: 4px;
-        background: linear-gradient(to left, $cj-dark-blue-colour, $cj-red-colour);
-      }
-    }
-  }
-}
-
-.cj-top-bar__menu__item__link--active {
+%gradient-underline {
   text-decoration: underline;
 
   @include mq($from: tablet) {
@@ -161,10 +128,34 @@
       background: linear-gradient(to left, $cj-dark-blue-colour, $cj-red-colour);
     }
 
+    // this is needed because the last nav item has less padding
     &:last-child {
       &:after {
         width: calc(100% - #{$cj-gutter-half});
       }
     }
   }
+}
+
+.cj-top-bar__menu__item__link {
+  @include focusable;
+  display: block;
+  position: relative;
+  padding: $cj-gutter-half;
+  font-weight: 300;
+
+  @include mq($from: tablet) {
+    display: inline-block;
+    padding: $cj-gutter $cj-gutter-half;
+  }
+
+  &:hover,
+  &:focus {
+    color: darken($cj-text-colour, 20);
+    @extend %gradient-underline;
+  }
+}
+
+.cj-top-bar__menu__item__link--active {
+  @extend %gradient-underline;
 }
