@@ -7,7 +7,7 @@
   },
   "scripts": {
     "build:javascripts": "rollup --config rollup.config.js",
-    "build:stylesheets": "sass colmjude_frontend/src/scss:assets/stylesheets --load-path colmjude_frontend/templates/components",
+    "build:stylesheets": "sass colmjude_frontend/src/scss:assets/stylesheets --load-path colmjude_frontend/templates",
     "clean:package": "rm -rf package/colmjude-frontend",
     "copy:scss": "copyfiles 'colmjude_frontend/src/scss/**/*.scss' package/colmjude-frontend/ --up 3 && copyfiles 'colmjude_frontend/templates/components/**/*.scss' package/colmjude-frontend/ --up 2",
     "copy:templates": "copyfiles 'colmjude_frontend/templates/**/*.jinja' package/colmjude-frontend/ --up 2",

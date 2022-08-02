@@ -15,7 +15,7 @@
     max-width: 100%;
   
     &.cj-footer--text-xs {
-      @extend %cj-body-text--xs;
+      @extend %cj-body-xs;
       max-width: 400px;
     }
   }
@@ -36,7 +36,7 @@
   }
 
   .no-flexbox & {
-    @include clearfix;
+    @include cj-clearfix;
   }
 
   .cj-footer__content__item {
