@@ -6,8 +6,8 @@
   padding: $cj-gutter * 1.5;
   color: $cj-off-white;
   background: $cj-dark-blue-colour;
-  font-family: $cj-font-family-sans;
   @include cj-font($size: 16);
+  font-family: $cj-font-family-sans;
 
   @include mq($from: 550px) {
     padding: ($cj-gutter * 1.5) 50px;
