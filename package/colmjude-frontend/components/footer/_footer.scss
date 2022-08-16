@@ -1,11 +1,13 @@
 .cj-footer {
+  box-sizing: border-box;
   position: absolute;
   bottom: 0;
   width: 100%;
   padding: $cj-gutter * 1.5;
   color: $cj-off-white;
   background: $cj-dark-blue-colour;
-  font-size: 16px;
+  font-family: $cj-font-family-sans;
+  @include cj-font($size: 16);
 
   @include mq($from: 550px) {
     padding: ($cj-gutter * 1.5) 50px;
@@ -17,10 +19,12 @@
     &.cj-footer--text-xs {
       @extend %cj-body-xs;
       max-width: 400px;
+      color: $cj-off-white;
     }
   }
 
   a {
+    color: $cj-off-white;
     text-decoration: underline;
 
     &:hover,

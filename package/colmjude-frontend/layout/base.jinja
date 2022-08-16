@@ -24,7 +24,7 @@
       {%- block headEnd %}{% endblock headEnd -%}
   {% endblock head %}
 </head>
-<body class="{{ bodyClasses }}">
+<body class="cj-template__body{{ ' ' + bodyClasses if bodyClasses }}">
   <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
   {% block bodyStart %}{% endblock %}
 

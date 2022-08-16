@@ -1,0 +1,7 @@
+.cj-template__body {
+  // The default margins set by user-agents are not required since we have our
+  // own containers.
+  margin: 0;
+  // Set the overall body of the page back to the typical background colour.
+  background-color: $cj-page-background-colour;
+}
