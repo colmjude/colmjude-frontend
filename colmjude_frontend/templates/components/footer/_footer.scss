@@ -1,11 +1,8 @@
 .cj-footer {
   box-sizing: border-box;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
   padding: $cj-gutter * 1.5;
-  color: $cj-off-white;
   background: $cj-dark-blue-colour;
+  color: $cj-off-white;
   @include cj-font($size: 16);
   font-family: $cj-font-family-sans;
 
@@ -20,6 +17,7 @@
       @extend %cj-body-xs;
       max-width: 400px;
       color: $cj-off-white;
+      font-family: $cj-font-family-sans;
     }
   }
 
