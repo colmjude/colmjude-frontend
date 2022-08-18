@@ -1,5 +1,5 @@
 {% macro cjFooter(params) %}
-<footer class="cj-footer">
+<footer class="cj-footer{{ ' ' + params.classes if params.classes }}">
 	<div class="cj-footer__content">
 		<div class="cj-footer__content__item">
 			<p>&copy; 2008 &mdash; 2022</p>
