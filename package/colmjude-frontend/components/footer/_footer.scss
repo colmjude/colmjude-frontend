@@ -3,7 +3,7 @@
   padding: $cj-gutter * 1.5;
   background: $cj-dark-blue-colour;
   color: $cj-off-white;
-  @include cj-font($size: 16);
+  @include cj-font($size: 20);
   font-family: $cj-font-family-sans;
 
   @include mq($from: 550px) {
@@ -13,8 +13,8 @@
   p {
     max-width: 100%;
   
-    &.cj-footer--text-xs {
-      @extend %cj-body-xs;
+    &.cj-footer--text-s {
+      @extend %cj-body-s;
       max-width: 400px;
       color: $cj-off-white;
       font-family: $cj-font-family-sans;
