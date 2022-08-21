@@ -1,12 +1,13 @@
 .cj-top-bar {
   position: relative;
-  padding: 0 30px;
+  padding: 0 15px;
   @include cj-typography-common($font-family: $cj-font-family-sans);
   color: $cj-text-colour;
 
   @include mq($from: tablet) {
     display: flex;
     justify-content: space-between;
+    padding: 0 30px;
   }
 
   .logo-sqr {
@@ -18,7 +19,7 @@
 
   label {
     position: absolute;
-    top: $cj-gutter * 1.5;
+    top: 35px;
     right: $cj-gutter;
     font-size: 20px;
     line-height: 35px;

@@ -1,13 +1,13 @@
 .cj-footer {
   box-sizing: border-box;
-  padding: $cj-gutter * 1.5;
+  padding: ($cj-gutter * 1.5) $cj-gutter-half;
   background: $cj-dark-blue-colour;
   color: $cj-off-white;
   @include cj-font($size: 20);
   font-family: $cj-font-family-sans;
 
-  @include mq($from: 550px) {
-    padding: ($cj-gutter * 1.5) 50px;
+  @include mq($from: tablet) {
+    padding: $cj-gutter * 1.5;
   }
 
   p {
