@@ -53,12 +53,27 @@
 
 .cj-top-bar__details__link {
   @include focusable;
-  display: block;
+  display: inline-block;
   padding: $cj-gutter 0;
   color: inherit;
   text-decoration: none;
 
   &:hover {
+    text-decoration: underline;
+  }
+}
+
+.cj-top-bar__details__subsection {
+  display: inline-block;
+  @include cj-font($size: 20, $font-family: $cj-font-family-sans);
+}
+
+.cj-top-bar__details__subsection__link {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
     text-decoration: underline;
   }
 }
