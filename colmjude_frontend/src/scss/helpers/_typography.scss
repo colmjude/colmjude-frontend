@@ -132,9 +132,13 @@
 ///
 /// @access public
 
-@mixin cj-font($size, $weight: regular, $tabular: false, $line-height: false) {
+@mixin cj-font($size, $weight: regular, $tabular: false, $line-height: false, $font-family: false) {
 
-  @include cj-typography-common;
+  @if $font-family {
+    @include cj-typography-common($font-family: $font-family);
+  } @else {
+    @include cj-typography-common;
+  }
 
   @if $weight == regular {
     @include cj-typography-weight-regular;
