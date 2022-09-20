@@ -8,6 +8,12 @@ $cj-link-hover-colour: #ae3724 !default; // darken(#d95a45, 15)
 $cj-link-visited-colour: lighten($cj-link-colour, 10) !default;
 $cj-link-active-colour: darken($cj-link-colour, 5) !default;
 
+// typography colours
+// -----------------------------------------
+
+$cj-secondary-text-opacity: .75 !default;
+$cj-secondary-text-colour: rgba($cj-text-colour, $cj-secondary-text-opacity) !default;
+
 /// Logo colours (Red and Blue)
 ///
 /// @type Colour

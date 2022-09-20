@@ -121,3 +121,20 @@
 .cj-body {
   @extend %cj-body-m;
 }
+
+// Secondary text
+// ----------------------------------------------------------------
+
+%cj-secondary-text {
+  color: $cj-secondary-text-colour;
+}
+
+.cj-secondary-text {
+  @extend %cj-secondary-text;
+  @include cj-font($size: 20, $font-family: $cj-font-family-sans-serif);
+}
+
+.cj-secondary-text--s {
+  @extend %cj-secondary-text;
+  @include cj-font($size: 16, $font-family: $cj-font-family-sans-serif);
+}
