@@ -1,29 +1,29 @@
-$cj-text-colour: #262731;
-$cj-page-background-colour: #fff;
+$cj-text-colour: #262731 !default;
+$cj-page-background-colour: #fff !default;
 
-$cj-off-white: #f5f3f0;
+$cj-off-white: #f5f3f0 !default;
 
-$cj-link-colour: #3a5d8b;
-$cj-link-hover-colour: #ae3724; // darken(#d95a45, 15)
-$cj-link-visited-colour: lighten($cj-link-colour, 10);
-$cj-link-active-colour: darken($cj-link-colour, 5);
+$cj-link-colour: #3a5d8b !default;
+$cj-link-hover-colour: #ae3724 !default; // darken(#d95a45, 15)
+$cj-link-visited-colour: lighten($cj-link-colour, 10) !default;
+$cj-link-active-colour: darken($cj-link-colour, 5) !default;
 
 /// Logo colours (Red and Blue)
 ///
 /// @type Colour
 /// @access public
 
-$cj-dark-blue-colour: #1c2d43;
-$cj-red-colour: #d95a45;
+$cj-dark-blue-colour: #1c2d43 !default;
+$cj-red-colour: #d95a45 !default;
 
 
 // focus colours
 // -----------------------------------------
 
-$cj-focus-colour: #53B7EA;
-$cj-focus-text-colour: $cj-text-colour;
+$cj-focus-colour: #53B7EA !default;
+$cj-focus-text-colour: $cj-text-colour !default;
 
 // Notes colours
 // -----------------------------------------
 
-$cj-orange-colour: #e9a23f;
+$cj-orange-colour: #e9a23f !default;
