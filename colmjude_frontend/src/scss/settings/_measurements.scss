@@ -1,4 +1,13 @@
+/// Width of the page container where all page content goes
+///
+/// @type Number
+/// @access public
+
+$cj-page-width: 960px !default;
+
 /// Extra width used to break out of containers on larger screens
+/// 
+/// for example on code-blocks
 ///
 /// @type Number
 /// @access public
