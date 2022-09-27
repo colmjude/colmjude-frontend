@@ -32,11 +32,15 @@
   <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
   {% block bodyStart %}{% endblock %}
 
+  {%- block header %}{% endblock header %}
+
   {% block main -%}
+  <main class="cj-main">
     {% block content %}{% endblock %}
+  </main>
   {%- endblock %}
 
-  {% block footer %}{% endblock footer %}
+  {%- block footer %}{% endblock footer %}
   
   {% block bodyEnd %}
     {%- block bodyScriptsStart %}{% endblock bodyScriptsStart %}
