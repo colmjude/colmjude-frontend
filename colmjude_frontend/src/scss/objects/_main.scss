@@ -1,0 +1,4 @@
+.cj-main {
+  @include cj-responsive-margin(9, 'top');
+  @include cj-responsive-margin(9, 'bottom');
+}
