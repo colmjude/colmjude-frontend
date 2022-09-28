@@ -76,5 +76,17 @@ $cj-spacing-responsive-scale: (
   9: (
     null: 40px,
     tablet: 60px
+  ),
+  x3: (
+    null: 60px,
+    tablet: 90px
+  ),
+  x4: (
+    null: 80px,
+    tablet: 120px
+  ),
+  x5: (
+    null: 100px,
+    tablet: 150px
   )
 ) !default;
