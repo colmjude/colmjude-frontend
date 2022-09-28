@@ -10,6 +10,10 @@
   <meta name="description" content="{{ pageDescription }}">
   <meta name="author" content="Colm Britton">
 
+  {%- block canonicalTag %}
+  <link rel="canonical" href="{{ canonicalURL }}" />
+  {% endblock canonicalTag -%}
+
   {% block head %}
     {%- block headStart %}{% endblock headStart -%}
 
