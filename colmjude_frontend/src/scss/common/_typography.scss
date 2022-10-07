@@ -145,7 +145,7 @@
 
 // inline <code>
 %cj-code {
-  padding: .3em, .5em;
+  padding: .25em .4em;
   @include cj-typography-common($font-family: $cj-font-family-mono);
   font-size: 1em;
   font-weight: inherit;
