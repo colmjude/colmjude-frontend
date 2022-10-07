@@ -138,3 +138,23 @@
   @extend %cj-secondary-text;
   @include cj-font($size: 16, $font-family: $cj-font-family-sans-serif);
 }
+
+
+// Code element styles
+// ----------------------------------------------------------------
+
+// inline <code>
+%cj-code {
+  padding: .3em, .5em;
+  @include cj-font($size: 20, $font-family: $cj-font-family-mono);
+  background: $cj-off-white;
+  border-radius: 2px;
+
+  p & {
+    white-space: nowrap;
+  }
+}
+
+.cj-code {
+  @extend %cj-code;
+}
