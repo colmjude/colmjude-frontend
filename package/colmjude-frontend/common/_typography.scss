@@ -157,6 +157,7 @@
   }
 }
 
+// for inline code elements
 .cj-code {
   @extend %cj-code;
 }
@@ -167,4 +168,12 @@
 .cj-inset-text {
   padding: .5em 0 .5em $cj-gutter;
   border-left: 4px solid $cj-dark-blue-colour;
+}
+
+
+// text selection
+// ----------------------------------------------------------------
+
+::selection {
+  background: $cj-text-selection-background;
 }
