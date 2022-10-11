@@ -1,5 +1,5 @@
-@mixin cj-link-style ($link-colour: $cj-link-colour, $link-visited-colour: $cj-link-visited-colour, $link-hover-colour: $cj-link-hover-colour, $link-active-colour: $cj-link-active-colour, $focus-text-colour: $cj-focus-text-colour) {
-  @include cj-typography-common;
+@mixin cj-link-style ($link-colour: $cj-link-colour, $link-visited-colour: $cj-link-visited-colour, $link-hover-colour: $cj-link-hover-colour, $link-active-colour: $cj-link-active-colour, $focus-text-colour: $cj-focus-text-colour, $font-family: $cj-font-family) {
+  @include cj-typography-common($font-family: $font-family);
   text-decoration: underline;
 
   @if $cj-link-underline-thickness {
