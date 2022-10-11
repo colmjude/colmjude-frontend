@@ -35,16 +35,17 @@ $menu-button-border-width: 1px;
   }
 
   label {
-    display: inline-block;
+    display: inline-block; // stops the tiny gap below element
     position: relative;
     margin-left: -4px;
     padding: 4px 7px 3px;
     border: $menu-button-border-width solid $cj-dark-blue-colour;
+    line-height: math.div(24, 19);
 
     @include mq(400px) {
       position: absolute;
       top: 35px;
-      right: $cj-gutter;
+      right: $cj-gutter-half;
       margin-left: 0;
       padding-top: 0;
       padding-bottom: 0;
