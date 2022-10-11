@@ -1,3 +1,9 @@
+// nav settings
+
+$menu-smallest-bp: 400px;
+$menu-button-margin: 15px;
+$menu-button-border-width: 1px;
+
 .cj-top-bar {
   position: relative;
   padding: 0 15px;
@@ -10,15 +16,16 @@
     padding: 0 30px;
   }
 
-  nav {
-    @include mq($until: tablet) {
-      box-shadow: rgba($cj-red-colour, 0.4) 0px 5px,
-                  rgba($cj-red-colour, 0.3) 0px 10px, 
-                  rgba($cj-red-colour, 0.2) 0px 15px, 
-                  rgba($cj-red-colour, 0.1) 0px 20px, 
-                  rgba($cj-red-colour, 0.05) 0px 25px;
-    }
-  }
+  // used to give it a stepped box shadow but don't like anymore
+  // nav {
+  //   @include mq($until: tablet) {
+  //     box-shadow: rgba($cj-red-colour, 0.4) 0px 5px,
+  //                 rgba($cj-red-colour, 0.3) 0px 10px, 
+  //                 rgba($cj-red-colour, 0.2) 0px 15px, 
+  //                 rgba($cj-red-colour, 0.1) 0px 20px, 
+  //                 rgba($cj-red-colour, 0.05) 0px 25px;
+  //   }
+  // }
 
   .logo-sqr {
     display: inline;
@@ -28,11 +35,23 @@
   }
 
   label {
-    position: absolute;
-    top: 35px;
-    right: $cj-gutter;
-    font-size: 20px;
-    line-height: 35px;
+    display: inline-block;
+    position: relative;
+    margin-left: -4px;
+    padding: 4px 7px 3px;
+    border: $menu-button-border-width solid $cj-dark-blue-colour;
+
+    @include mq(400px) {
+      position: absolute;
+      top: 35px;
+      right: $cj-gutter;
+      margin-left: 0;
+      padding-top: 0;
+      padding-bottom: 0;
+      border: none;
+      font-size: 20px;
+      line-height: 35px;
+    }
 
     &:hover,
     &:focus {
@@ -106,9 +125,14 @@
     display: none;
   }
   margin: 0;
+  margin-top: $menu-button-margin;
   padding: 0;
   list-style: none;
   text-align: center;
+
+  @include mq(400px) {
+    margin-top: 0;
+  }
 
   @include mq($from: tablet) {
     display: flex;
@@ -116,12 +140,48 @@
   }
 }
 
-.cj-top-bar__menu-toggle:checked ~ .cj-top-bar__menu {
-  display: block;
-  margin-bottom: $cj-gutter * 2;
 
-  @include mq($from: tablet) {
-    display: flex;
+.cj-top-bar__menu-toggle:checked {
+  & + label {
+    color: #fff;
+    background: $cj-dark-blue-colour;
+  
+    &:after {
+      content: "";
+      position: absolute;
+      width: $menu-button-border-width;
+      height: $menu-button-margin;
+      background: $cj-dark-blue-colour;
+      bottom: -($menu-button-margin) - $menu-button-border-width;
+      left: -($menu-button-border-width);
+  
+      @include mq($menu-smallest-bp) {
+        height: 30px;
+        left: unset;
+        bottom: -30px;
+        right: 0;
+      }
+  
+      @include mq($from: tablet) {
+        display: none;
+      }
+    }
+  }
+
+  & ~ .cj-top-bar__menu {
+    display: block;
+    margin-bottom: $cj-gutter * 2;
+    border-left: $menu-button-border-width solid $cj-dark-blue-colour;
+
+    @include mq($menu-smallest-bp) {
+      border-left: none;
+      border-right: $menu-button-border-width solid $cj-dark-blue-colour;
+    }
+
+    @include mq($from: tablet) {
+      display: flex;
+      border-right: none;
+    }
   }
 }
 
