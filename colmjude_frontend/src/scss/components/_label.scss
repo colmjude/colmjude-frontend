@@ -3,3 +3,11 @@
   display: block;
   margin-bottom: cj-spacing(1);
 }
+
+.cj-label--l {
+  @include cj-font($size: 25);
+}
+
+.cj-label--bold {
+  font-weight: bold;
+}
