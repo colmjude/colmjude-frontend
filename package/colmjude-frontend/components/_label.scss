@@ -1,0 +1,5 @@
+.cj-label {
+  @include cj-font($size: 20);
+  display: block;
+  margin-bottom: cj-spacing(1);
+}
