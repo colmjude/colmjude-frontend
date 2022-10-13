@@ -1,0 +1,29 @@
+$cj-border-width-form-element: 1px;
+.cj-input {
+  @include cj-font($size: 20);
+
+  box-sizing: border-box;
+  width: 100%;
+  height: 40px;
+  margin-top: 0;
+
+  padding: cj-spacing(1);
+  // setting any background-color makes text invisible when changing colours to dark backgrounds in Firefox (https://bugzilla.mozilla.org/show_bug.cgi?id=1335476)
+  // as background-color and color need to always be set together, color should not be set either
+  border: $cj-border-width-form-element solid $cj-text-colour;
+  border-radius: 0;
+
+  // Disable inner shadow and remove rounded corners
+  appearance: none;
+
+  &:focus {
+    outline: 2px solid $cj-focus-colour;
+    // Ensure outline appears outside of the element
+    outline-offset: 0;
+    // Double the border by adding its width again. Use `box-shadow` for this // instead of changing `border-width` - this is for consistency with
+    // components such as textarea where we avoid changing `border-width` as
+    // it will change the element size. Also, `outline` cannot be utilised
+    // here as it is already used for the yellow focus state.
+    box-shadow: inset 0 0 0 $cj-border-width-form-element;
+  }
+}
