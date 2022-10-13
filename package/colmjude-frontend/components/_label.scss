@@ -1,10 +1,20 @@
-.cj-label {
-  @include cj-font($size: 20);
+%cj-label {
   display: block;
   margin-bottom: cj-spacing(1);
 }
 
+.cj-label {
+  @extend %cj-label;
+  @include cj-font($size: 20);
+}
+
+.cj-label--xl {
+  @extend %cj-label;
+  @include cj-font($size: 32);
+}
+
 .cj-label--l {
+  @extend %cj-label;
   @include cj-font($size: 25);
 }
 
