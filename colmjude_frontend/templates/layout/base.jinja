@@ -17,8 +17,8 @@
   {% block head %}
     {%- block headStart %}{% endblock headStart -%}
 
-    {%- block pageAssets %}
-      {% block googleFonts %}
+    {% block pageAssets -%}
+      {%- block googleFonts %}
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&family=Esteban&family=Ibarra+Real+Nova:wght@0,400;0,700;1,400;1,700&family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
@@ -26,12 +26,12 @@
       
       {%- block stylesheets -%}
           <link rel="stylesheet" media="all" href="{{ assetPath }}/stylesheets/colmjude-frontend.css" />
-          {% endblock stylesheets -%}
-      {% endblock pageAssets %}
+      {% endblock stylesheets -%}
+    {% endblock pageAssets -%}
 
-      {% block favicon %}{% endblock favicon %}
+    {% block favicon -%}{% endblock favicon -%}
 
-      {%- block headEnd %}{% endblock headEnd -%}
+    {%- block headEnd %}{% endblock headEnd -%}
   {% endblock head %}
 </head>
 <body class="cj-template__body{{ ' ' + bodyClasses if bodyClasses }}">
