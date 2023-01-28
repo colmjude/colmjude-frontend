@@ -9,6 +9,7 @@
     "build:javascripts": "rollup --config rollup.config.js",
     "build:stylesheets": "sass colmjude_frontend/src/scss:assets/stylesheets --load-path colmjude_frontend/templates",
     "clean:package": "rm -rf package/colmjude-frontend",
+    "copy:assets": "copyfiles 'colmjude_frontend/assets/**/*' package/colmjude-frontend/ --V --up 1",
     "copy:scss": "copyfiles 'colmjude_frontend/src/scss/**/*.scss' package/colmjude-frontend/ --up 3 && copyfiles 'colmjude_frontend/templates/components/**/*.scss' package/colmjude-frontend/ --up 2",
     "copy:templates": "copyfiles 'colmjude_frontend/templates/**/*.jinja' package/colmjude-frontend/ --up 2",
     "css:autoprefix": "npx postcss assets/stylesheets/**/*.css --base assets/stylesheets --dir assets/stylesheets/ --no-map --use autoprefixer",
