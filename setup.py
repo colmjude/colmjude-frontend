@@ -13,7 +13,7 @@ for directory in directories_jinja:
 
 setup(
     name="colmjude-frontend",
-    version="0.2.8",
+    version="0.2.9",
     author="Colm Britton",
     description="Reusable frontend code for colmjude.com",
     license="MIT",
