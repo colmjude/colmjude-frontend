@@ -25,6 +25,10 @@ scripts.build = {
   javascripts: `npx rollup --config ${configPaths.rollupConfig}`
 }
 
+scripts.assets = {
+  images: `npx copyfiles '${configPaths.colmjudeFrontendPath}assets/images/**/*' ${configPaths.imagesOutputPath} --up 3`
+}
+
 
 scripts.watch = {
   assets: `npx chokidar ${configPaths.watchPaths} -c "npm run nps build.javascripts && npm run nps build.stylesheets"`,
