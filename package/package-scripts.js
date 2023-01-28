@@ -26,7 +26,7 @@ scripts.build = {
 }
 
 scripts.assets = {
-  images: `npx copyfiles '${configPaths.colmjudeFrontendPath}assets/images/**/*' ${configPaths.imagesOutputPath} --up 3`
+  images: `npx copyfiles '${configPaths.colmjudeFrontendPath}colmjude-frontend/assets/images/**/*' ${configPaths.imagesOutputPath} --up 3`
 }
 
 
