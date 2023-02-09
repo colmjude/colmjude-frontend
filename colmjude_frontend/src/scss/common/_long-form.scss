@@ -23,7 +23,6 @@
   @include set-flow-space-variable('large', 60);
 
   @extend %cj-flow;
-  --long-form-spacing: 2.625rem;
   --flow-space: var(--flow-space-avg);
   max-width: 50rem; // limit line length
   line-height: 1.5;
