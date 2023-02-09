@@ -1,3 +1,20 @@
+@mixin set-flow-space-variable($name, $size) {
+  $font-map: map-get($cj-typography-scale, $size);
+
+  @each $breakpoint, $breakpoint-map in $font-map {
+    $font-size: map-get($breakpoint-map, "font-size");
+    $font-size-rem: cj-px-to-rem($font-size);
+    @if not $breakpoint {
+      --flow-space-#{$name}: #{$font-size-rem};
+    } @else {
+      @include mq($from: $breakpoint) {
+        --flow-space-#{$name}: #{$font-size-rem};
+      }
+    }
+  }
+}
+
+
 :root {
   --cj-gutter: #{$cj-gutter};
   --vertical-spacing: var($cj-gutter);
@@ -8,4 +25,9 @@
   --large-heading-text-width: 15ch;
   --medium-heading-text-width: 25ch;
   --small-heading-text-width: 35ch;
+
+  // flow variables
+  @include set-flow-space-variable('avg', 42);
+  @include set-flow-space-variable('small', 20);
+  @include set-flow-space-variable('large', 60);
 }
