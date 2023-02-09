@@ -73,6 +73,7 @@
 }
 
 %cj-body-l {
+  max-width: var(--large-body-text-width);
   color: $cj-text-colour;
   @include cj-font($size: 25, $line-height: 1.5);
 
@@ -82,7 +83,6 @@
 // paragraphy "body" text
 
 .cj-body-l {
-  max-width: var(--large-body-text-width);
   @extend %cj-body-l;
 }
 
