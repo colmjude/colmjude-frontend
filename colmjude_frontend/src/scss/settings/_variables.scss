@@ -1,3 +1,4 @@
 :root {
-  --vertical-spacing: #{$cj-gutter};
+  --cj-gutter: #{$cj-gutter};
+  --vertical-spacing: var($cj-gutter);
 }

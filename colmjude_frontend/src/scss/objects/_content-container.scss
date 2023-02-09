@@ -1,5 +1,9 @@
 .cj-content-container {
-  max-width: cj-px-to-rem((20 * 35)); // 20 (standard font-size) * 32 (line length in ems)
+  box-sizing: border-box;
+  width: 90vw;
+  // the main space we have to play with on a page
+  width: clamp(16rem, 90vw, 70rem);
   margin: 0 auto;
-  padding: 0;
+  padding-left: var(--cj-gutter);
+  padding-right: var(--cj-gutter);
 }

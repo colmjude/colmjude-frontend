@@ -1,0 +1,48 @@
+@mixin set-flow-space-variable($name, $size) {
+  $font-map: map-get($cj-typography-scale, $size);
+
+  @each $breakpoint, $breakpoint-map in $font-map {
+    $font-size: map-get($breakpoint-map, "font-size");
+    $font-size-rem: cj-px-to-rem($font-size);
+    @if not $breakpoint {
+      --flow-space-#{$name}: #{$font-size-rem};
+    } @else {
+      @include mq($from: $breakpoint) {
+        --flow-space-#{$name}: #{$font-size-rem};
+      }
+    }
+  }
+}
+
+
+// specifically for long form content
+// e.g. blog posts, note, articles, etc
+.cj-long-form {
+  @include set-flow-space-variable('avg', 42);
+  @include set-flow-space-variable('small', 20);
+  @include set-flow-space-variable('large', 60);
+
+  @extend %cj-flow;
+  --long-form-spacing: 2.625rem;
+  --flow-space: var(--flow-space-avg);
+  max-width: 50rem; // limit line length
+  line-height: 1.5;
+
+  .cj-heading-l,
+  .cj-heading-m {
+    --flow-space: var(--flow-space-large);
+
+    & + * {
+      --flow-space: var(--flow-space-small);
+    }
+  }
+
+  .cj-figure,
+  .cj-figure + * {
+    --flow-space: var(--flow-space-large);
+  }
+
+  .cj-code-block + * {
+    --flow-space: var(--flow-space-avg);
+  }
+}
