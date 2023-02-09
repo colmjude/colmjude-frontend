@@ -37,6 +37,13 @@
     }
   }
 
+  .cj-heading-s,
+  .cj-heading-xs {
+    & + * {
+      --flow-space: var(--flow-space-small);
+    }
+  }
+
   .cj-figure,
   .cj-figure + * {
     --flow-space: var(--flow-space-large);
