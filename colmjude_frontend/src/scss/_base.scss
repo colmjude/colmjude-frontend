@@ -3,7 +3,8 @@
 
 // should be used in projects where you don't want all the general cj classes to be in the stylesheet output
 
+@import 'vendor/all';
+
 @import "settings/all";
 @import "tools/all";
 @import 'helpers/all';
-@import 'vendor/all';
