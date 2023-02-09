@@ -1,0 +1,10 @@
+%cj-flow {
+  & > * + * {
+    margin-top: var(--flow-space, 1em);
+  }
+}
+
+// for use with elements that have a lot of content/inline elements
+.cj-flow {
+  @extend %cj-flow;
+}

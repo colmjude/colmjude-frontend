@@ -1,3 +1,11 @@
 :root {
-  --vertical-spacing: #{$cj-gutter};
+  --cj-gutter: #{$cj-gutter};
+  --vertical-spacing: var($cj-gutter);
+
+  // line lengths
+  --body-text-width: 60ch;
+  --large-body-text-width: 50ch;
+  --large-heading-text-width: 15ch;
+  --medium-heading-text-width: 25ch;
+  --small-heading-text-width: 35ch;
 }

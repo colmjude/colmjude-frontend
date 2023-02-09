@@ -5,6 +5,7 @@
   @include cj-font($size: 60, $weight: bold);
 
   display: block;
+  max-width: var(--large-heading-text-width);
 
   margin-top: 0;
   @include cj-responsive-margin(8, "bottom");
@@ -19,6 +20,7 @@
   @include cj-font($size: 42, $weight: bold);
 
   display: block;
+  max-width: var(--medium-heading-text-width);
 
   margin-top: 0;
   @include cj-responsive-margin(6, "bottom");
@@ -33,6 +35,7 @@
   @include cj-font($size: 32, $weight: bold);
 
   display: block;
+  max-width: var(--medium-heading-text-width);
 
   margin-top: 0;
   @include cj-responsive-margin(4, "bottom");
@@ -47,6 +50,7 @@
   @include cj-font($size: 25, $weight: bold);
 
   display: block;
+  max-width: var(--small-heading-text-width);
 
   margin-top: 0;
   @include cj-responsive-margin(4, "bottom");
@@ -61,6 +65,7 @@
   @include cj-font($size: 20, $weight: bold);
 
   display: block;
+  max-width: var(--large-body-text-width);
 
   margin-top: 0;
   @include cj-responsive-margin(2, "bottom");
@@ -72,7 +77,7 @@
 
 %cj-body-l {
   color: $cj-text-colour;
-  @include cj-font($size: 25);
+  @include cj-font($size: 25, $line-height: 1.5);
 
   margin-top: 0;
   @include cj-responsive-margin(6, "bottom");
@@ -81,12 +86,14 @@
 // paragraphy "body" text
 
 .cj-body-l {
+  max-width: var(--large-body-text-width);
   @extend %cj-body-l;
 }
 
 %cj-body-m {
+  max-width: var(--body-text-width);
   color: $cj-text-colour;
-  @include cj-font($size: 20);
+  @include cj-font($size: 20, $line-height: 1.5);
 
   margin-top: 0;
   @include cj-responsive-margin(4, "bottom");
@@ -97,8 +104,9 @@
 }
 
 %cj-body-s {
+  max-width: var(--body-text-width);
   color: $cj-text-colour;
-  @include cj-font($size: 16);
+  @include cj-font($size: 16, $line-height: 1.5);
 
   margin-top: 0;
   @include cj-responsive-margin(4, "bottom");
@@ -110,7 +118,7 @@
 
 %cj-body-xs {
   color: $cj-text-colour;
-  @include cj-font($size: 14);
+  @include cj-font($size: 14, $line-height: 1.5);
 
   margin-top: 0;
   @include cj-responsive-margin(4, "bottom");
@@ -130,13 +138,14 @@
 }
 
 .cj-secondary-text {
+  max-width: var(--body-text-width);
   @extend %cj-secondary-text;
-  @include cj-font($size: 20, $font-family: $cj-font-family-sans-serif);
+  @include cj-font($size: 20, $font-family: $cj-font-family-sans-serif, $line-height: 1.5);
 }
 
 .cj-secondary-text--s {
   @extend %cj-secondary-text;
-  @include cj-font($size: 16, $font-family: $cj-font-family-sans-serif);
+  @include cj-font($size: 16, $font-family: $cj-font-family-sans-serif, $line-height: 1.5);
 }
 
 
