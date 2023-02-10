@@ -1,9 +1,10 @@
 // specifically for long form content
 // e.g. blog posts, note, articles, etc
 .cj-long-form {
+  --max-width: var(--cj-max-content-width);
   @extend %cj-flow;
   --flow-space: var(--flow-space-avg);
-  max-width: 50rem; // limit line length
+  max-width: var(--max-width); // limit line length
   line-height: 1.5;
 
   .cj-heading-l,
