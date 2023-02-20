@@ -1,9 +1,10 @@
 .cj-content-container {
+  --content-container-padding: var(--cj-gutter);
   box-sizing: border-box;
   width: 90vw;
   // the main space we have to play with on a page
   width: clamp(16rem, 90vw, 70rem);
   margin: 0 auto;
-  padding-left: var(--cj-gutter);
-  padding-right: var(--cj-gutter);
+  padding-left: var(--content-container-padding);
+  padding-right: var(--content-container-padding);
 }
