@@ -2,7 +2,7 @@
 <footer class="cj-footer{{ ' ' + params.classes if params.classes }}">
 	<div class="cj-footer__content">
 		<div class="cj-footer__content__item">
-			<p>&copy; 2008 &mdash; 2022</p>
+			<p>&copy; 2008 &mdash; {{ params.current_year|default('2024') }}</p>
 			<p class="cj-footer--text-s">The majority of the content on this site is published under a <a
 					href="http://creativecommons.org/licenses/by/3.0/" target="new" rel="noopener">Creative
 					Commons Attribution 3.0 licence</a>.</p>
