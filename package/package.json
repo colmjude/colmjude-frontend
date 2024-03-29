@@ -1,7 +1,7 @@
 {
   "name": "colmjude-frontend",
   "description": "Colmjude frontend",
-  "version": "0.2.91",
+  "version": "0.2.92",
   "engines": {
     "node": ">= 4.2.0"
   },
